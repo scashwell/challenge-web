@@ -6,6 +6,10 @@ export function Text({ text, color, size, style }: { text: string, color?: strin
     let lineHeight: string;
 
     switch (size) {
+        case 'extra-small':
+            fontSize = '0.75rem';
+            lineHeight = '1rem';
+            break;
         case 'small':
             fontSize = '0.875rem';
             lineHeight = '1.25rem';

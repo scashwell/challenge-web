@@ -5,6 +5,7 @@ import { convertTimeStringToMinutes, getColor, scrollToElement, truncate } from 
 import { BibleProjectLogo } from "./BibleProjectLogo.tsx";
 import { Line } from "./Line.tsx";
 import { RightChevron } from "./RightChevron.tsx";
+import { Tag } from "./Tag.tsx";
 import { Text } from "./Text.tsx";
 import { YouTubeElement } from "./YouTubeElement.tsx";
 
@@ -24,6 +25,7 @@ function VideoTile({ video, onSelectVideo }: { video: Video, onSelectVideo: (vid
                 onClick={handleClick}
                 src={images.small}
                 alt={`${title} preview`}/>
+            {video._new && <Tag text='NEW' />}
             <Text
                 text={title}
                 style={{ marginTop: '0.5rem', fontWeight: '500' }}/>
@@ -51,7 +53,10 @@ function VideoTile({ video, onSelectVideo }: { video: Video, onSelectVideo: (vid
 }
 
 function VideoList({ videos, onSelectVideo }: { videos: Video[], onSelectVideo: (video: Video) => void }) {
-    const videoList = videos.map((video) => {
+    const videoList = videos.map((video, index) => {
+        if (index === 0) {
+            video._new = true;
+        }
         return (
             <VideoTile
                 video={video}

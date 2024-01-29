@@ -16,6 +16,7 @@ type Video = {
     title: string;
     publishDate: string;
     youtubeId: string;
+    _new?: boolean;
 }
 
 type VideoCategory = {

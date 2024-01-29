@@ -67,6 +67,7 @@ li {
 }
 
 .video-tile {
+    position: relative;
     width: 18rem;
 }
 
@@ -120,6 +121,10 @@ li {
     .video-category-description {
         padding: 0;
         margin-top: 1rem;
+    }
+
+    .preview-image:hover {
+        transform: none;
     }
 }
 
