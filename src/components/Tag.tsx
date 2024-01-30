@@ -3,7 +3,7 @@ import { Text } from "./Text.tsx";
 
 export function Tag ({ text }: {text: string}) {
     return (
-        <span style={{
+        <div style={{
             backgroundColor: getColor('white'),
             position: 'absolute',
             top: '0.75rem',
@@ -14,6 +14,6 @@ export function Tag ({ text }: {text: string}) {
             pointerEvents: 'none'
         }}>
             <Text text={text} size='extra-small' color='dark-gray' style={{ fontWeight: '500' }}/>
-        </span>
+        </div>
     )
 }
