@@ -1,8 +1,10 @@
-export function Line({ width = '3rem', color = 'var(--white)' }: { width?: string, color?: string }) {
+import { getColor } from "../utils/helper.tsx";
+
+export function Line({ width = '3rem', color = 'white' }: { width?: string, color?: string }) {
     const lineStyle = {
         height: '1px',
         width: width,
-        backgroundColor: color,
+        backgroundColor: getColor(color),
         margin: '1rem 0'
     }
 

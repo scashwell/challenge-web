@@ -25,21 +25,25 @@ function VideoTile({ video, onSelectVideo }: { video: Video, onSelectVideo: (vid
                 onClick={handleClick}
                 src={images.small}
                 alt={`${title} preview`}/>
-            {video._new && <Tag text='NEW' />}
+            {video._new && <Tag text='NEW'/>}
+            <TextComp style={{ marginTop: '0.5rem', fontWeight: '500' }}>
+                {title}
+            </TextComp>
             <TextComp
-                text={title}
-                style={{ marginTop: '0.5rem', fontWeight: '500' }}/>
-            <TextComp
-                text={truncate(description, 100)}
                 color='light-gray'
                 size='small'
-                style={{ marginTop: '0.5rem' }}/>
+                style={{ marginTop: '0.5rem' }}
+            >
+                {truncate(description, 100)}
+            </TextComp>
             <div className='video-tile-footer'>
                 <TextComp
-                    text={convertTimeStringToMinutes(subtitle)}
                     color='light-gray'
                     size='small'
-                    style={{ fontWeight: '500' }}/>
+                    style={{ fontWeight: '500' }}
+                >
+                    {convertTimeStringToMinutes(subtitle)}
+                </TextComp>
 
                 <div
                     className='circle'
@@ -89,17 +93,19 @@ function VideoCategorySection({ videoCategory, selectedVideo, error }: {
                 <Line/>
                 <TextComp
                     color="white"
-                    text={description}
                     style={{ fontWeight: '500' }}
-                />
+                >
+                    {description}
+                </TextComp>
             </div>
             <div>
                 {error &&
                     <TextComp
-                        text={error}
                         color='white'
                         style={{ textAlign: 'center' }}
-                    />
+                    >
+                        {error}
+                    </TextComp>
                 }
                 {selectedVideo &&
                     <YouTubeElement

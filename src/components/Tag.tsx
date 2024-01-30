@@ -13,7 +13,13 @@ export function Tag({ text }: { text: string }) {
             cursor: 'pointer',
             pointerEvents: 'none'
         }}>
-            <TextComp text={text} size='extra-small' color='dark-gray' style={{ fontWeight: '500' }}/>
+            <TextComp
+                size='extra-small'
+                color='dark-gray'
+                style={{ fontWeight: '500' }}
+            >
+                {text}
+            </TextComp>
         </div>
     )
 }

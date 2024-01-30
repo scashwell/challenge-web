@@ -4,7 +4,13 @@ export function BibleProjectLogo() {
 
     return (
         <div>
-            <TextComp text='BibleProject' color='white' size='extra-large' style={{ fontWeight: 700 }}></TextComp>
+            <TextComp
+                color='white'
+                size='extra-large'
+                style={{ fontWeight: 700 }}
+            >
+                {'BibleProject'}
+            </TextComp>
         </div>
     );
 }

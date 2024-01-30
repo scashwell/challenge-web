@@ -1,8 +1,8 @@
-import { CSSProperties } from "react";
+import { CSSProperties, ReactNode } from "react";
 import { getColor } from "../utils/helper.tsx";
 
-export function TextComp({ text, color, size, style }: {
-    text: string,
+export function TextComp({ children, color, size, style }: {
+    children: ReactNode,
     color?: string,
     size?: string,
     style?: CSSProperties
@@ -35,6 +35,6 @@ export function TextComp({ text, color, size, style }: {
         ...style
     }
     return (
-        <p style={paragraphStyle}>{text}</p>
+        <p style={paragraphStyle}>{children}</p>
     )
 }
