@@ -1,7 +1,7 @@
 import { getColor } from "../utils/helper.tsx";
-import { Text } from "./Text.tsx";
+import { TextComp } from "./TextComp.tsx";
 
-export function Tag ({ text }: {text: string}) {
+export function Tag({ text }: { text: string }) {
     return (
         <div style={{
             backgroundColor: getColor('white'),
@@ -13,7 +13,7 @@ export function Tag ({ text }: {text: string}) {
             cursor: 'pointer',
             pointerEvents: 'none'
         }}>
-            <Text text={text} size='extra-small' color='dark-gray' style={{ fontWeight: '500' }}/>
+            <TextComp text={text} size='extra-small' color='dark-gray' style={{ fontWeight: '500' }}/>
         </div>
     )
 }

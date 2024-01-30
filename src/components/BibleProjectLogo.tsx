@@ -1,11 +1,10 @@
+import { TextComp } from "./TextComp.tsx";
+
 export function BibleProjectLogo() {
-    const logoStyle = {
-        color: 'var(--white)',
-        fontSize: '1.5rem',
-        fontWeight: 700,
-    };
 
     return (
-        <span style={logoStyle}>BibleProject</span>
+        <div>
+            <TextComp text='BibleProject' color='white' size='extra-large' style={{ fontWeight: 700 }}></TextComp>
+        </div>
     );
 }

@@ -6,7 +6,7 @@ import { BibleProjectLogo } from "./BibleProjectLogo.tsx";
 import { Line } from "./Line.tsx";
 import { RightChevron } from "./RightChevron.tsx";
 import { Tag } from "./Tag.tsx";
-import { Text } from "./Text.tsx";
+import { TextComp } from "./TextComp.tsx";
 import { YouTubeElement } from "./YouTubeElement.tsx";
 
 const SCREEN_WIDTH_BREAKPOINT = 1024;
@@ -26,16 +26,16 @@ function VideoTile({ video, onSelectVideo }: { video: Video, onSelectVideo: (vid
                 src={images.small}
                 alt={`${title} preview`}/>
             {video._new && <Tag text='NEW' />}
-            <Text
+            <TextComp
                 text={title}
                 style={{ marginTop: '0.5rem', fontWeight: '500' }}/>
-            <Text
+            <TextComp
                 text={truncate(description, 100)}
                 color='light-gray'
                 size='small'
                 style={{ marginTop: '0.5rem' }}/>
             <div className='video-tile-footer'>
-                <Text
+                <TextComp
                     text={convertTimeStringToMinutes(subtitle)}
                     color='light-gray'
                     size='small'
@@ -87,7 +87,7 @@ function VideoCategorySection({ videoCategory, selectedVideo, error }: {
             <div className='video-category-description'>
                 <h1 style={{ color: getColor('white') }}>{title}</h1>
                 <Line/>
-                <Text
+                <TextComp
                     color="white"
                     text={description}
                     style={{ fontWeight: '500' }}
@@ -95,7 +95,7 @@ function VideoCategorySection({ videoCategory, selectedVideo, error }: {
             </div>
             <div>
                 {error &&
-                    <Text
+                    <TextComp
                         text={error}
                         color='white'
                         style={{ textAlign: 'center' }}
